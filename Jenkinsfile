@@ -16,7 +16,7 @@ pipeline {
         stage('Setup Maven') {
             steps {
                 script {
-                    def mvnHome = tool name: 'Maven3', type: 'maven'
+                    def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
                     env.PATH = "${mvnHome}/bin:${env.PATH}"
                 }
             }
