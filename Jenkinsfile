@@ -1,14 +1,14 @@
 pipeline {
     agent any
     tools{
-        maven 'Maven3'
+        maven 'MAVEN_HOME'
 
     }
 
     environment {
         PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
         DOCKERHUB_CREDENTIALS_ID = 'Docker_Hub'
-        DOCKER_IMAGE = 'amirdirin/javafx_with_db2'
+        DOCKER_IMAGE = 'aruraruri/javafx_with_db2'
         DOCKER_TAG = 'latest'
     }
 
@@ -24,7 +24,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/ADirin/javafx_with_mariadb.git'
+                git branch: 'master', url: 'https://github.com/aruraruri/javafx_with_mariadb.git'
             }
         }
 
